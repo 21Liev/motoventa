@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Moto;
@@ -14,8 +15,15 @@ class MotoController extends Controller
 
     public function create()
     {
-        return view('motos.create');
+        return view('create');
     }
+
+    public function catalogo()
+    {
+        $motos = Moto::all();
+        return view('motos', compact('motos'));
+    }
+
 
     public function store(Request $request)
     {
@@ -41,5 +49,44 @@ class MotoController extends Controller
 
         return redirect()->route('motos.index')->with('success', 'Moto agregada exitosamente.');
     }
-}
 
+    public function edit($id)
+    {
+        $moto = Moto::findOrFail($id);
+        return view('edit', compact('moto'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'anio' => 'required|integer',
+            'precio' => 'required|numeric',
+            'descripcion' => 'required|string',
+            // 'imagen' => 'nullable|image|max:2048', // si lo volvés a usar
+        ]);
+
+        $moto = Moto::findOrFail($id);
+        $moto->nombre = $request->nombre;
+        $moto->anio = $request->anio;
+        $moto->precio = $request->precio;
+        $moto->descripcion = $request->descripcion;
+
+        // Si volvés a usar imagen:
+        // if ($request->hasFile('imagen')) {
+        //     $moto->imagen = $request->file('imagen')->store('motos', 'public');
+        // }
+
+        $moto->save();
+
+        return redirect()->route('motos.index')->with('success', 'Moto actualizada correctamente.');
+    }
+
+    public function delete($id)
+    {
+        $moto = \App\Models\Moto::findOrFail($id);
+        $moto->delete();
+
+        return redirect()->route('motos.index')->with('success', 'Moto eliminada correctamente');
+    }
+}

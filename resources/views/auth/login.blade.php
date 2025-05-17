@@ -1,73 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+@if ($errors->any())
+    <div class="mb-4 text-red-600 text-sm text-center font-semibold">
+        El usuario o la contraseña no coinciden.
+    </div>
+@endif
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<div class="flex justify-center items-center min-h-[80vh] bg-gray-100 px-2">
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm">
+        <h1 class="text-2xl font-bold text-center text-slate-800 mb-4">Iniciar Sesión</h1>
+        <form method="POST" action="{{ route('login') }}" class="space-y-4">
+            @csrf
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-slate-700">Correo Electrónico</label>
+                <input type="email" name="email" id="email" required
+                    class="w-full mt-1 p-2.5 rounded-lg border border-gray-300 focus:ring-yellow-400 focus:border-yellow-400 transition duration-200" />
             </div>
-        </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-slate-700">Contraseña</label>
+                <input type="password" name="password" id="password" required
+                    class="w-full mt-1 p-2.5 rounded-lg border border-gray-300 focus:ring-yellow-400 focus:border-yellow-400 transition duration-200" />
+            </div>
+
+            <button type="submit"
+                class="w-full bg-[#ffde3a] hover:bg-yellow-400 text-slate-800 font-semibold py-2.5 rounded-lg shadow-sm transition duration-200">
+                Iniciar Sesión
+            </button>
+        </form>
     </div>
 </div>
 @endsection

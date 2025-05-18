@@ -6,7 +6,12 @@ module.exports = {
       './resources/**/*.vue',
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+        archivo: ['"Archivo Black"'],
+        roboto: ['"Roboto"'],
+      },
+      },
     },
     plugins: [],
   }

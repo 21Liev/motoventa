@@ -12,7 +12,11 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster&family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite('resources/css/app.css')
@@ -22,7 +26,7 @@
 <body>
     <header>
         {{-- nav --}}
-        <nav class="block w-screen h-36 px-4 py-2 bg-[#ffde3a] shadow-xl rounded-b-2xl lg:px-8 lg:py-3">
+        <nav class="block w-screen h-36 px-4 py-2 bg-[#E5CA17] shadow-xl rounded-b-2xl lg:px-8 lg:py-3">
             <div class="container flex flex-wrap items-center justify-between h-full font-bold">
 
                 <a href="{{ route('inicio') }}" class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold ml-16 hover:scale-110 transition-all duration-500">
@@ -96,9 +100,9 @@
         @yield('content')
     </main>
 
-    <footer class="bg-[#ffde3a] text-slate-800 py-6 mt-20 shadow-inner rounded-t-2xl">
+    <footer class="bg-[#E5CA17] text-slate-800 py-6 mt-20 shadow-inner rounded-t-2xl">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="text-sm font-semibold">&copy; {{ date('Y') }} AL Motor - Todos los derechos reservados</p>
+            <p class="text-sm font-semibold">&copy; {{ date('Y') }} AL Motor - sin derechos reservados pa</p>
             <div class="mt-2 flex justify-center gap-6 text-sm">
                 <a href="#" class="hover:text-yellow-600 transition">Términos y Condiciones</a>
                 <a href="#" class="hover:text-yellow-600 transition">Privacidad</a>

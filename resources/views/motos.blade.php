@@ -1,9 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
+<main>
+    {{-- Titulo --}}
+    <div>
+        <h2 class="text-4xl text-center mb-12 font-extrabold font-archivo text-[#87761f] mt-20">
+            NUESTRAS MOTOS
+        </h2>
+    </div>
+{{-- Botones de las motos --}}
+ <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 p-8 bg-white shadow-2xl shadow-[#0000004f] rounded-3xl">
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
+    </a>
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/scooter.png" alt="Moto scooter" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">SCOOTER</span>
+    </a>
 
-<div class="max-w-7xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">Listado de Motos</h1>
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/enduro.png" alt="Moto enduro" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">ENDURO</span>
+    </a>
+
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/chopper.png" alt="Moto chopper" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">CHOPPER</span>
+    </a>
+
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/naked.png" alt="Moto naked" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">NAKED</span>
+    </a>
+
+    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/touring.png" alt="Moto touring" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
+    </a>
+    </section>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($motos as $moto)
@@ -40,5 +75,5 @@
         @endforeach
     </div>
 </div>
-
+</main>
 @endsection

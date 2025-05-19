@@ -2,7 +2,10 @@
 
 @section('content')
 @if(Auth::check())
-    <div class="text-center mt-8 text-xl text-slate-700 font-semibold">
+    <div class="text-center mt-8 text-2xl text-slate-700 font-extrabold font-archivo">
+        Vista de administrador
+    </div>
+    <div class="text-center mt-8 text-2xl text-slate-700 font-extrabold font-roboto">
         ¡Bienvenido, {{ Auth::user()->email }}!
     </div>
 @endif
@@ -24,7 +27,7 @@
         </div>
     </section>
     {{-- botones de los modelos --}}
-    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 p-8 bg-white shadow-md mt-16">
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 p-8 bg-white shadow-2xl shadow-[#0000004f] rounded-3xl mt-16">
     <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
         <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
         <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
@@ -55,8 +58,6 @@
         <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
     </a>
     </section>
-
-
     {{-- seccion con fotos de las motos --}}
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start p-6 mt-20">
         {{-- texto y botons izquierda --}}

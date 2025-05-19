@@ -18,7 +18,7 @@ class MotoController extends Controller
         return view('create');
     }
 
-    public function catalogo()
+    public function catalogo() /*creo que esto no lo estamos usando */
     {
         $motos = Moto::all();
         return view('motos', compact('motos'));

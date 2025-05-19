@@ -2,58 +2,58 @@
 
 @section('content')
 @if(Auth::check())
-    <div class="text-center mt-8 text-xl text-slate-700 font-semibold">
-        ¡Bienvenido, {{ Auth::user()->email }}!
-    </div>
+<div class="text-center mt-8 text-xl text-slate-700 font-semibold">
+    ¡Bienvenido, {{ Auth::user()->email }}!
+</div>
 @endif
 <main>
     {{-- seccion del baner --}}
     <section>
         {{-- imagen de el inicio, queda aca --}}
         <div class="relative grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible mt-10">
-        {{-- imagen y texto con logo --}}
-        <div class="absolute top-15 left-44 z-10 flex flex-col items-start text-[#000000b6]">
-            <img src="/img/logo.png" alt="logo" class="w-60 h-60" />
-            <p class="text-2xl font-black italic">LÍDERES EN VENTA DEL PAÍS</p>
-        </div>
-        {{-- img --}}
-        <img
-            class="object-cover object-[center_-50px] w-full rounded-lg shadow-xl h-96 shadow-[#0000005d]"
-            src="https://media.istockphoto.com/id/2095561661/photo/yellow-and-black-sports-motorcycle-on-a-yellow-background.jpg?s=2048x2048&w=is&k=20&c=A3m61ejfm3gk839Vz8P7IhFntJ9Kzf_T6GDbF0pw0hE="
-            alt="Moto deportiva" />
+            {{-- imagen y texto con logo --}}
+            <div class="absolute top-15 left-44 z-10 flex flex-col items-start text-[#000000b6]">
+                <img src="/img/logo.png" alt="logo" class="w-60 h-60" />
+                <p class="text-2xl font-black italic">LÍDERES EN VENTA DEL PAÍS</p>
+            </div>
+            {{-- img --}}
+            <img
+                class="object-cover object-[center_-50px] w-full rounded-lg shadow-xl h-96 shadow-[#0000005d]"
+                src="https://media.istockphoto.com/id/2095561661/photo/yellow-and-black-sports-motorcycle-on-a-yellow-background.jpg?s=2048x2048&w=is&k=20&c=A3m61ejfm3gk839Vz8P7IhFntJ9Kzf_T6GDbF0pw0hE="
+                alt="Moto deportiva" />
         </div>
     </section>
     {{-- botones de los modelos --}}
     <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 p-8 bg-white shadow-md mt-16">
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
+        </a>
 
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/scooter.png" alt="Moto scooter" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">SCOOTER</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/scooter.png" alt="Moto scooter" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">SCOOTER</span>
+        </a>
 
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/enduro.png" alt="Moto enduro" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">ENDURO</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/enduro.png" alt="Moto enduro" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">ENDURO</span>
+        </a>
 
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/chopper.png" alt="Moto chopper" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">CHOPPER</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/chopper.png" alt="Moto chopper" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">CHOPPER</span>
+        </a>
 
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/naked.png" alt="Moto naked" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">NAKED</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/naked.png" alt="Moto naked" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">NAKED</span>
+        </a>
 
-    <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-        <img src="/img/touring.png" alt="Moto touring" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
-    </a>
+        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+            <img src="/img/touring.png" alt="Moto touring" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
+        </a>
     </section>
 
 
@@ -72,10 +72,11 @@
                 moverte con estilo y potencia.
             </p>
             <button
-            class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
+                class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
                 <span
                     class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Nuestro catalogo</span>
+                <span class="relative text-base font-semibold"><a href="{{ route('motos.index') }}">Nuestro catalogo</a></span>
+
             </button>
             <div class="p-5">
                 <img src="https://img.icons8.com/?size=100&id=26140&format=png&color=ebbf30" alt="flecha" class="w-8 h-8 animate-bounce duration-75">
@@ -110,14 +111,14 @@
                 EQUIPO PARA TI
             </h2>
             <p class="font-roboto font-medium text-[#3c340e] text-center text-xl pb-12 max-w-2xl mx-auto">
-             En nuestra tienda, sabemos que cada motociclista tiene sus necesidades y preferencias únicas.
-             Por eso, ofrecemos una amplia variedad de equipos y accesorios
-             para que puedas personalizar tu moto según tu estilo y comodidad.
+                En nuestra tienda, sabemos que cada motociclista tiene sus necesidades y preferencias únicas.
+                Por eso, ofrecemos una amplia variedad de equipos y accesorios
+                para que puedas personalizar tu moto según tu estilo y comodidad.
             </p>
             <button
-            class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
+                class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
                 <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Nuestro equipo</span>
+                <span class="relative text-base font-semibold"> <a href="{{ route('equipo') }}">Nuestro equipos</a></span>
             </button>
             <div class="p-5">
                 <img src="https://img.icons8.com/?size=100&id=26140&format=png&color=ebbf30" alt="flecha" class="w-8 h-8 animate-bounce [animation-duration:2s]">
@@ -132,7 +133,7 @@
                 CONTACTANOS
             </h2>
             <p class="font-roboto font-medium text-[#3c340e] text-center text-xl pb-12 max-w-2xl mx-auto">
-            Dejanos un mensaje con tus dudas y un asesosor se pondra en contacto contigo.
+                Dejanos un mensaje con tus dudas y un asesosor se pondra en contacto contigo.
             </p>
         </div>
 
@@ -144,35 +145,35 @@
             {{-- CSRF token para la seguridad del formulario --}}
             @csrf
             <div>
-            <label for="nombre" class="block text-lg font-semibold text-[#3c340e] mb-1">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="nombre" class="block text-lg font-semibold text-[#3c340e] mb-1">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Telefono</label>
-            <input type="tel" id="telefono" name="telefono" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="mensaje" class="block text-lg font-semibold text-[#3c340e] mb-1">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300"></textarea>
+                <label for="mensaje" class="block text-lg font-semibold text-[#3c340e] mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300"></textarea>
             </div>
 
             <div class="text-center">
-            <button
-            class="rounded px-6 py-4 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b]">
-                <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Enviar mensaje</span>
-            </button>
+                <button
+                    class="rounded px-6 py-4 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b]">
+                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span class="relative text-base font-semibold">Enviar mensaje</span>
+                </button>
             </div>
         </form>
     </section>

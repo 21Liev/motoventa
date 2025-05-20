@@ -18,7 +18,7 @@
                     class="mt-4 w-full h-48 object-cover rounded-lg">
                 @endif
             </div>
-
+            @auth
             <div class="flex justify-between mt-6">
                 <a href="{{ route('edit', $moto->id) }}"
                     class="px-4 py-2 bg-yellow-400 text-slate-800 font-semibold rounded-lg shadow hover:bg-yellow-500 transition">
@@ -36,6 +36,7 @@
                 </form>
 
             </div>
+            @endauth
         </div>
         @endforeach
     </div>

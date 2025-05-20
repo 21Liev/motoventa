@@ -126,56 +126,60 @@
         </div>
     </section>
     <div class="w-9/12 h-1 bg-[#f5c730] my-40 rounded-xl mx-auto"></div>
+
     {{-- Contacto --}}
-    <section>
-        <div>
-            <h2 class="text-5xl text-center mb-12 font-extrabold font-archivo text-[#87761f]">
-                CONTACTANOS
-            </h2>
-            <p class="font-roboto font-medium text-[#3c340e] text-center text-xl pb-12 max-w-2xl mx-auto">
-            Dejanos un mensaje con tus dudas y un asesosor se pondra en contacto contigo.
-            </p>
-        </div>
-
-
-
-        {{-- Formulario de contacto --}}
-        <form action="#" method="POST" class="space-y-6 bg-[#E5CA17] mt-10 px-6 py-12 shadow-xl rounded-2xl w-1/3 mx-auto font-roboto shadow-[#00000062]">
-            {{-- Mensaje de exito --}}
-            {{-- CSRF token para la seguridad del formulario --}}
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-10 md:px-32 mt-20">
+    {{-- Formulario a la izquierda --}}
+    <div class="flex justify-center">
+        <form action="#" method="POST" class="space-y-6 bg-[#E5CA17] mt-10 px-6 py-12 shadow-xl rounded-2xl font-roboto shadow-[#00000062] w-full max-w-xl mx-auto">
             @csrf
             <div>
-            <label for="nombre" class="block text-lg font-semibold text-[#3c340e] mb-1">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="nombre" class="block text-lg font-semibold text-[#3c340e] mb-1">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Telefono</label>
-            <input type="tel" id="telefono" name="telefono" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
+                <label for="telefono" class="block text-lg font-semibold text-[#3c340e] mb-1">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
 
             <div>
-            <label for="mensaje" class="block text-lg font-semibold text-[#3c340e] mb-1">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required
-                class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300"></textarea>
+                <label for="mensaje" class="block text-lg font-semibold text-[#3c340e] mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required
+                    class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300"></textarea>
             </div>
 
             <div class="text-center">
-            <button
-            class="rounded px-6 py-4 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b]">
-                <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Enviar mensaje</span>
-            </button>
+                <button
+                    class="rounded px-6 py-4 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b]">
+                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span class="relative text-base font-semibold">Enviar mensaje</span>
+                </button>
             </div>
         </form>
+    </div>
+    {{-- Texto a la derecha --}}
+    <div class="space-y-4 flex flex-col items-start justify-center px-4">
+        <h2 class="text-6xl font-extrabold font-archivo text-[#87761f] mb-6">
+            ¿Tenés dudas?
+        </h2>
+        <p class="font-roboto font-medium text-[#3c340e] text-xl pb-4 max-w-xl">
+            Nuestro equipo está listo para ayudarte con todo lo que necesites sobre repuestos, accesorios, presupuestos y mucho más.
+            Completá el formulario y te responderemos lo antes posible.
+        </p>
+        <p class="font-roboto font-medium text-[#3c340e] text-xl pb-4 max-w-xl">
+            ¡Tu próxima aventura sobre dos ruedas puede comenzar con un solo mensaje!
+        </p>
+    </div>
     </section>
+
 </main>
 @endsection

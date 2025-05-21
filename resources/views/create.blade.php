@@ -1,3 +1,5 @@
+//Hacer validaciones
+
 @extends('layouts.app')
 
 @section('content')
@@ -37,7 +39,7 @@
                 <input type="file" name="imagen"
                     class="w-full mt-2 p-2 rounded-xl border border-gray-300 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300" />
             </div>-->
-            
+
 
 
             <button type="submit"

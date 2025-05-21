@@ -23,7 +23,7 @@
             </div>
             <div class="space-y-4 flex flex-col items-center justify-center border-2 border-[#87761f59] rounded-xl shadow-xl shadow-[#0000005e] p-10">
                 <h2 class="text-7xl text-center mb-8 font-extrabold font-archivo text-[#87761f] mt-10">
-                    PALERMO
+                    CABA
                 </h2>
                     <ul class="space-y-4 text-[#3c340e] text-xl font-roboto font-semibold text-left">
                         <li class="flex items-cente gap-4">

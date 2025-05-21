@@ -25,10 +25,10 @@ Route::get('/motos', [MotoController::class, 'index'])->name('motos.index');
 Route::middleware('auth')->group(function () {
     Route::get('/create', [MotoController::class, 'create'])->name('create');
     Route::post('/motos', [MotoController::class, 'store'])->name('motos.store');
+    Route::get('/motos/{id}/edit', [MotoController::class, 'edit'])->name('edit');
+    Route::put('/motos/{id}', [MotoController::class, 'update'])->name('motos.update');
 });
 
-Route::get('/motos/{id}/edit', [MotoController::class, 'edit'])->name('edit');
-Route::put('/motos/{id}', [MotoController::class, 'update'])->name('motos.update');
 Route::delete('/motos/{id}', [MotoController::class, 'delete'])->name('delete');
 
 

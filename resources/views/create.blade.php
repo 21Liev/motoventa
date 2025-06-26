@@ -39,11 +39,13 @@
             </div>-->
             
 
+            <div class="flex justify-center items-center">
+                <button type="submit"
+                    class=" rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
+                    Agregar Moto
+                </button>
 
-            <button type="submit"
-                class="w-full bg-[#ffde3a] hover:bg-yellow-400 text-slate-800 font-bold py-3 rounded-xl shadow-md transition duration-300">
-                Agregar Moto
-            </button>
+            </div>
         </form>
     </div>
 </div>

@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="{{ asset('img/32x32.png') }}" type="image/png">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('AL motors', 'AL motors') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -26,7 +26,7 @@
 <body>
     <header>
         {{-- nav --}}
-        <nav class="block w-screen h-36 px-4 py-2 bg-[#E5CA17] shadow-xl rounded-b-2xl lg:px-8 lg:py-3">
+        <nav class="block w-full h-36 px-4 py-2 bg-[#E5CA17] shadow-xl rounded-b-2xl lg:px-8 lg:py-3">
             <div class="container flex flex-wrap items-center justify-between h-full font-bold">
 
                 <a href="{{ route('inicio') }}" class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold ml-16 hover:scale-110 transition-all duration-500">

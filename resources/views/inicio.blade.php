@@ -126,6 +126,7 @@
         </div>
     </section>
     <div class="w-9/12 h-1 bg-[#f5c730] my-40 rounded-xl mx-auto"></div>
+
     {{-- Contacto --}}
     <section>
         <div>
@@ -143,6 +144,10 @@
         <form action="#" method="POST" class="space-y-6 bg-[#E5CA17] mt-10 px-6 py-12 shadow-xl rounded-2xl w-1/3 mx-auto font-roboto shadow-[#00000062]">
             {{-- Mensaje de exito --}}
             {{-- CSRF token para la seguridad del formulario --}}
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-10 md:px-32 mt-20">
+    {{-- Formulario a la izquierda --}}
+    <div class="flex justify-center">
+        <form action="#" method="POST" class="space-y-6 bg-[#E5CA17] mt-10 px-6 py-12 shadow-xl rounded-2xl font-roboto shadow-[#00000062] w-full max-w-xl mx-auto">
             @csrf
             <div>
                 <label for="nombre" class="block text-lg font-semibold text-[#3c340e] mb-1">Nombre</label>
@@ -158,6 +163,7 @@
 
             <div>
                 <label for="email" class="block text-lg font-semibold text-[#3c340e] mb-1">Telefono</label>
+                <label for="telefono" class="block text-lg font-semibold text-[#3c340e] mb-1">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" required
                     class="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3c340e] focus:border-[#3c340e] transition duration-300" />
             </div>
@@ -176,6 +182,21 @@
                 </button>
             </div>
         </form>
+    </div>
+    {{-- Texto a la derecha --}}
+    <div class="space-y-4 flex flex-col items-start justify-center px-4">
+        <h2 class="text-6xl font-extrabold font-archivo text-[#87761f] mb-6">
+            ¿Tenés dudas?
+        </h2>
+        <p class="font-roboto font-medium text-[#3c340e] text-xl pb-4 max-w-xl">
+            Nuestro equipo está listo para ayudarte con todo lo que necesites sobre repuestos, accesorios, presupuestos y mucho más.
+            Completá el formulario y te responderemos lo antes posible.
+        </p>
+        <p class="font-roboto font-medium text-[#3c340e] text-xl pb-4 max-w-xl">
+            ¡Tu próxima aventura sobre dos ruedas puede comenzar con un solo mensaje!
+        </p>
+    </div>
     </section>
+
 </main>
 @endsection

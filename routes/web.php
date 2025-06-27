@@ -37,6 +37,7 @@ Route::middleware('auth', 'role:1')->group(function () {
     Route::get('/motos/{id}/edit', [MotoController::class, 'edit'])->name('edit');
     Route::put('/motos/{id}', [MotoController::class, 'update'])->name('motos.update');
     Route::delete('/motos/{id}', [MotoController::class, 'delete'])->name('delete');
+    Route::get('/admin/usuarios', [AuthController::class, 'index'])->name('listadoClientes');
 });
 
 Route::middleware(['auth', 'role:2'])->group(function () {

@@ -22,9 +22,9 @@ class AuthController extends Controller
             $user = Auth::user();
 
             if ($user->role == 1) {
-                return redirect()->route(''); // Hay que definir estas vistas en caso de que se redirija a diferentes lugares
+                return redirect()->route('home'); // Hay que definir estas vistas en caso de que se redirija a diferentes lugares
             } elseif ($user->role == 2) {
-                return redirect()->route('');
+                return redirect()->route('home');
             }
 
             return redirect()->route('inicio');
@@ -49,7 +49,7 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:4|confirmed'
+            'password' => 'required|string|min:2|confirmed'
 
         ]);
 

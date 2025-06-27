@@ -31,7 +31,7 @@
             </button>
             <div>
                 <p>No tienes cuenta?</p>
-                <a href="{{ route('registrarse') }}"
+                <a href="{{ route('registro') }}"
                     class="block text-center w-full hover:bg-yellow-400 font-semibold py-2.5 px-6 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b] rounded-md">
                     <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <span class="relative text-base font-semibold">REGISTRARSE</span>

@@ -62,6 +62,13 @@
                                 AGREGAR MOTO
                             </a>
                         </li>
+                        <li
+                            class="flex items-center p-3 text-sm gap-x-2 text-slate-800 hover:scale-125 hover:bg-[#ffe786] rounded-lg transition-all duration-500 hover:shadow-md">
+                            <img src="https://img.icons8.com/?size=23&id=QUnLakqCvUtp&format=png&color=292929" alt="">
+                            <a href="{{ route('login') }}" class="flex items-center">
+                                LISTADO CLIENTES  
+                            </a>
+                        </li>
                         @endif
                         @endauth
                         @guest
@@ -70,9 +77,7 @@
                             <img src="https://img.icons8.com/?size=23&id=QUnLakqCvUtp&format=png&color=292929" alt="">
                             <a href="{{ route('login') }}" class="flex items-center">
                                 INICIAR SESIÓN
-                                
                             </a>
-
                         </li>
                         @endguest
                         @auth

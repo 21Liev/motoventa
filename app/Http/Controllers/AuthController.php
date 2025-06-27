@@ -13,15 +13,24 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+{
+    $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('inicio');
+    if (Auth::attempt($credentials)) {
+        $user = Auth::user();
+
+        if ($user->role == 1) {
+            return redirect()->route(''); // Hay que definir estas vistas
+        } elseif ($user->role == 2) {
+            return redirect()->route(''); // Hay que definir estas vistas
         }
 
-        return back()->withErrors(['error' => 'Credenciales incorrectas']);
+        return redirect()->route('inicio');
     }
+
+    return back()->withErrors(['error' => 'Credenciales incorrectas']);
+}
+
 
     public function logout()
     {

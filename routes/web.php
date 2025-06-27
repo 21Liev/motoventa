@@ -22,14 +22,17 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/motos', [MotoController::class, 'index'])->name('motos.index');
 
 // Motos protegidas (solo para usuarios autenticados)
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'role:1')->group(function () {
     Route::get('/create', [MotoController::class, 'create'])->name('create');
     Route::post('/motos', [MotoController::class, 'store'])->name('motos.store');
     Route::get('/motos/{id}/edit', [MotoController::class, 'edit'])->name('edit');
     Route::put('/motos/{id}', [MotoController::class, 'update'])->name('motos.update');
+    Route::delete('/motos/{id}', [MotoController::class, 'delete'])->name('delete');
 });
 
-Route::delete('/motos/{id}', [MotoController::class, 'delete'])->name('delete');
+Route::middleware(['auth', 'role:2'])->group(function () {
+    // Rutas solo para clientes
+});
 
 
 

@@ -56,23 +56,25 @@
                     @endif
                 </div>
                 @auth
-                <div class="flex justify-between mt-6">
-                    <a href="{{ route('edit', $moto->id) }}"
-                        class="px-4 py-2 bg-yellow-400 text-slate-800 font-semibold rounded-lg shadow hover:bg-yellow-500 transition">
-                        Editar
-                    </a>
-    
-                    <form action="{{ route('delete', $moto->id) }}" method="POST"
-                        onsubmit="return confirm('¿Estás seguro de que querés eliminar esta moto? Esta acción no se puede deshacer.');">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit"
-                            class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition">
-                            Eliminar
-                        </button>
-                    </form>
-    
-                </div>
+                    @if(auth()->user()->role == 1)
+                        <div class="flex justify-between mt-6">
+                            <a href="{{ route('edit', $moto->id) }}"
+                                class="px-4 py-2 bg-yellow-400 text-slate-800 font-semibold rounded-lg shadow hover:bg-yellow-500 transition">
+                                Editar
+                            </a>
+            
+                            <form action="{{ route('delete', $moto->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que querés eliminar esta moto? Esta acción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition">
+                                    Eliminar
+                                </button>
+                            </form>
+            
+                        </div>
+                    @endif
                 @endauth
             </div>
             @endforeach

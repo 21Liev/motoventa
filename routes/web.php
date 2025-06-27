@@ -6,14 +6,23 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MotoController;
 use App\Http\Controllers\SucursalController;
+use App\Http\Controllers\AuthController;
 
 // Página de inicio
 Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
 
-// Autenticación (login, register, etc.)
-Auth::routes();
+
+
+
+// Rutas personalizadas de login y registro
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/registrarse', [AuthController::class, 'showRegister'])->name('registro');
+Route::post('/registrarse', [AuthController::class, 'registrarse'])->name('registrarse.post');
+
 
 // Página post-login
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -31,7 +40,7 @@ Route::middleware('auth', 'role:1')->group(function () {
 });
 
 Route::middleware(['auth', 'role:2'])->group(function () {
-    // Rutas solo para clientes
+    
 });
 
 

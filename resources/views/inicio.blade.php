@@ -2,9 +2,7 @@
 
 @section('content')
 @if(Auth::check())
-<div class="text-center mt-8 text-2xl text-slate-700 font-extrabold font-archivo">
-    Vista de administrador
-</div>
+
 <div class="text-center mt-8 text-2xl text-slate-700 font-extrabold font-roboto">
     ¡Bienvenido, {{ Auth::user()->email }}!
 </div>

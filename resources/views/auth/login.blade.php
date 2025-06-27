@@ -2,9 +2,9 @@
 
 @section('content')
 @if ($errors->any())
-    <div class="text-red-600 text-xl text-center font-semibold font-roboto">
-        El usuario o la contraseña no coinciden.
-    </div>
+<div class="text-red-600 text-xl text-center font-semibold font-roboto">
+    El usuario o la contraseña no coinciden.
+</div>
 @endif
 
 <div class="flex justify-center items-center min-h-[80vh] px-2 font-roboto">
@@ -29,6 +29,15 @@
                 <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
                 <span class="relative text-base font-semibold">Iniciar sesión</span>
             </button>
+            <div>
+                <p>No tienes cuenta?</p>
+                <a href="{{ route('registrarse') }}"
+                    class="block text-center w-full hover:bg-yellow-400 font-semibold py-2.5 px-6 overflow-hidden group bg-[#ffe17d] relative hover:bg-gradient-to-r hover:from-[#ffe17d] hover:to-[#b8a422f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000004b] rounded-md">
+                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-20 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span class="relative text-base font-semibold">REGISTRARSE</span>
+                </a>
+
+            </div>
         </form>
     </div>
 </div>

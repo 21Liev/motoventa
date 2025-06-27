@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->tinyInteger('role')->default(2)->after('password'); // 2 = cliente por defecto
+            $table->tinyInteger('role')->default(2); // 2 = cliente por defecto
             $table->rememberToken();
             $table->timestamps();
         });

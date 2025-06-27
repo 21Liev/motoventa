@@ -22,9 +22,9 @@ class AuthController extends Controller
             $user = Auth::user();
 
             if ($user->role == 1) {
-                return redirect()->route('home'); // Hay que definir estas vistas en caso de que se redirija a diferentes lugares
+                return redirect()->route('inicio'); // Hay que definir estas vistas en caso de que se redirija a diferentes lugares
             } elseif ($user->role == 2) {
-                return redirect()->route('home');
+                return redirect()->route('inicio');
             }
 
             return redirect()->route('inicio');
@@ -63,5 +63,10 @@ class AuthController extends Controller
         Auth::login($user);
 
         return redirect()->route('inicio')->with('success', 'Registro exitoso, bienvenido!');
+    }
+    public function index()
+    {
+        $clientes = User::all();
+        return view('listadoClientes', compact('clientes'));
     }
 }

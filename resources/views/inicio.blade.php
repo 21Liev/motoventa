@@ -25,37 +25,46 @@
         </div>
     </section>
     {{-- botones de los modelos --}}
-    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 p-8 bg-white shadow-2xl shadow-[#0000004f] rounded-3xl mt-16">
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
-        </a>
+<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6 p-8 bg-white shadow-2xl shadow-[#0000004f] rounded-3xl">
 
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/scooter.png" alt="Moto scooter" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">SCOOTER</span>
-        </a>
+    <a href="{{ url('/motos?categoria=1') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/deportiva.png" alt="Moto deportiva" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">DEPORTIVA</span>
+    </a>
 
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/enduro.png" alt="Moto enduro" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">ENDURO</span>
-        </a>
+    <a href="{{ url('/motos?categoria=2') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/scooter.png" alt="Moto scooter" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">SCOOTER</span>
+    </a>
 
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/chopper.png" alt="Moto chopper" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">CHOPPER</span>
-        </a>
+    <a href="{{ url('/motos?categoria=3') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/enduro.png" alt="Moto enduro" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">ENDURO</span>
+    </a>
 
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/naked.png" alt="Moto naked" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">NAKED</span>
-        </a>
+    <a href="{{ url('/motos?categoria=4') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/chopper.png" alt="Moto chopper" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">CHOPPER</span>
+    </a>
 
-        <a href="#" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
-            <img src="/img/touring.png" alt="Moto touring" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
-            <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
-        </a>
-    </section>
+    <a href="{{ url('/motos?categoria=5') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/naked.png" alt="Moto naked" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">NAKED</span>
+    </a>
+
+    <a href="{{ url('/motos?categoria=6') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/touring.png" alt="Moto touring" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TOURING</span>
+    </a>
+
+    <a href="{{ url('/motos') }}" class="group flex flex-col items-center transition-all duration-300 transform hover:scale-105">
+        <img src="/img/juntas.png" alt="Todas las motos" class="opacity-50 w-1200 h-800 object-contain transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-lg">
+        <span class="mt-2 text-sm font-bold text-[#3c340e] group-hover:text-[#b49d29] transition-colors">TODAS</span>
+    </a>
+
+</section>
+
+
     {{-- seccion con fotos de las motos --}}
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start p-6 mt-20">
         {{-- texto y botons izquierda --}}
@@ -70,12 +79,12 @@
                 rendimiento diario, tenemos la opción ideal para vos. Descubrí la libertad de
                 moverte con estilo y potencia.
             </p>
-            <button
-                class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
-                <span
-                    class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Nuestro catalogo</span>
-            </button>
+                <a href="{{ route('motos.index') }}"
+                class="inline-block rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
+                    <span
+                        class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span class="relative text-base font-semibold">Nuestro catálogo</span>
+                </a>
             <div class="p-5">
                 <img src="https://img.icons8.com/?size=100&id=26140&format=png&color=ebbf30" alt="flecha" class="w-8 h-8 animate-bounce duration-75">
             </div>
@@ -113,11 +122,11 @@
                 Por eso, ofrecemos una amplia variedad de equipos y accesorios
                 para que puedas personalizar tu moto según tu estilo y comodidad.
             </p>
-            <button
-                class="rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
-                <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span class="relative text-base font-semibold">Nuestro equipo</span>
-            </button>
+                <a href="{{ route('equipo') }}"
+                class="inline-block rounded px-6 py-4 overflow-hidden group bg-[#ebbf30] relative hover:bg-gradient-to-r hover:from-[#ebb630] hover:to-[#ffe435f6] text-[#3c340e] hover:ring-2 hover:ring-offset-2 hover:ring-[#968832] transition-all ease-out duration-300 shadow-lg shadow-[#0000008c]">
+                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                    <span class="relative text-base font-semibold">Nuestro equipo</span>
+                </a>
             <div class="p-5">
                 <img src="https://img.icons8.com/?size=100&id=26140&format=png&color=ebbf30" alt="flecha" class="w-8 h-8 animate-bounce [animation-duration:2s]">
             </div>
@@ -194,3 +203,16 @@
 
 </main>
 @endsection
+<script>
+    document.querySelectorAll('.filtro-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoria = this.getAttribute('data-filtro');
+            const url = categoria === 'todos'
+                ? '{{ route('motos.index') }}'
+                : '{{ route('motos.index') }}' + '?categoria=' + categoria;
+
+            window.location.href = url;
+        });
+    });
+</script>

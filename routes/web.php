@@ -45,6 +45,7 @@ Route::middleware(['auth', 'role:1'])->group(function () {
     Route::get('equipos/{equipo}/edit', [EquipoController::class, 'edit'])->name('equipos.edit');
     Route::put('/equipos/{equipo}', [EquipoController::class, 'update'])->name('equipos.update');
     Route::delete('/equipos/{equipo}', [EquipoController::class, 'destroy'])->name('equipos.destroy');
+    Route::get('/listadoClientes', [AuthController::class, 'index'])->name('listadoClientes');
 
 });
 

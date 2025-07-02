@@ -20,7 +20,7 @@
                     <td class="px-6 py-4">{{ $cliente->id }}</td>
                     <td class="px-6 py-4">{{ $cliente->name }}</td>
                     <td class="px-6 py-4">{{ $cliente->email }}</td>
-                    <td class="px-6 py-4">{{ $cliente->created_at->format('d/m/Y') }}</td>
+                    <td class="px-6 py-4">{{ $cliente->created_at ? $cliente->created_at->format('d/m/Y') : 'Sin fecha' }}</td>
                 </tr>
             @empty
                 <tr>

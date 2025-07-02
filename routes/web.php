@@ -24,6 +24,7 @@ Route::get('/registrarse', [AuthController::class, 'showRegister'])->name('regis
 Route::post('/registrarse', [AuthController::class, 'registrarse'])->name('registrarse.post');
 
 
+
 // Página post-login
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -31,16 +32,25 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/motos', [MotoController::class, 'index'])->name('motos.index');
 
 // Motos protegidas (solo para usuarios autenticados)
-Route::middleware('auth', 'role:1')->group(function () {
+Route::middleware(['auth', 'role:1'])->group(function () {
+    // Rutas de motos (ya las tenés)
     Route::get('/create', [MotoController::class, 'create'])->name('create');
-    Route::post('/motos', [MotoController::class, 'store'])->name('motos.store');
-    Route::get('/motos/{id}/edit', [MotoController::class, 'edit'])->name('edit');
+    Route::post('/motos', [MotoController::class, 'store'])->name('motos.store');    // En routes/web.php
+    Route::get('motos/{moto}/edit', [MotoController::class, 'edit'])->name('motos.edit');
     Route::put('/motos/{id}', [MotoController::class, 'update'])->name('motos.update');
     Route::delete('/motos/{id}', [MotoController::class, 'delete'])->name('delete');
+
+    // Rutas de equipos (equipo = singular, rutas = plural)
+    Route::get('/equipos/create', [EquipoController::class, 'create'])->name('equipos.create');
+    Route::post('/equipos', [EquipoController::class, 'store'])->name('equipos.store');
+    Route::get('equipos/{equipo}/edit', [EquipoController::class, 'edit'])->name('equipos.edit');
+    Route::put('/equipos/{equipo}', [EquipoController::class, 'update'])->name('equipos.update');
+    Route::delete('/equipos/{equipo}', [EquipoController::class, 'destroy'])->name('equipos.destroy');
+
 });
 
 Route::middleware(['auth', 'role:2'])->group(function () {
-    
+
 });
 
 

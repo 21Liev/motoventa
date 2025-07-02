@@ -6,6 +6,13 @@
         Hubo un error en el registro. Verificá los datos e intentá nuevamente.
     </div>
 @endif
+@if ($errors->any())
+    <ul class="text-red-600 text-sm mb-4">
+        @foreach ($errors->all() as $error)
+            <li>• {{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
 
 <div class="flex justify-center items-center min-h-[80vh] px-2 font-roboto">
     <div class="p-6 rounded-xl shadow-2xl shadow-[#00000048] w-full max-w-sm bg-[#E5CA17]">

@@ -38,7 +38,7 @@
                         <li class="flex items-center p-3 text-sm gap-x-2 text-slate-800 hover:scale-125 hover:bg-[#ffe786] rounded-lg transition-all duration-500 hover:shadow-md">
                             <img src="https://img.icons8.com/?size=28&id=6KVNHRjkdN6l&format=png&color=292929" alt="">
                             <a href="{{ route('motos.index') }}" class="flex items-center">
-                                CATALOGO
+                                MOTOS
                             </a>
                         </li>
 

@@ -21,7 +21,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copiar archivos del proyecto
 WORKDIR /var/www
 COPY . .
-
+# Copiar archivos del proyecto
 # Instalar dependencias Laravel
 RUN composer install --no-dev --optimize-autoloader
 

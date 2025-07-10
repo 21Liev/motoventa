@@ -1,26 +1,31 @@
 services:
   - type: web
-    name: laravel-app
+    name: motoventa
     env: docker
     plan: free
+    dockerfilePath: ./Dockerfile
+    buildFilter:
+      paths:
+        - .
+    autoDeploy: true
     envVars:
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        value: base64:XXXXXXXXXXXXXXXXXXXXXXX
+        value: base64:xxxxxxxxxxxxxxxxxxxxxxxxxxx
       - key: APP_DEBUG
         value: false
       - key: APP_URL
-        value: https://tu-app.onrender.com
+        value: https://motoventa.onrender.com
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST
-        value: xxx
+        value: tuhost.mysql.render.com
       - key: DB_PORT
         value: 3306
       - key: DB_DATABASE
-        value: nombre_db
+        value: nombre_de_base
       - key: DB_USERNAME
         value: usuario
       - key: DB_PASSWORD
-        value: contraseña
+        value: clave

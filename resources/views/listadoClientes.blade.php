@@ -1,5 +1,4 @@
-
-@extends('layouts.app') 
+@extends('layouts.app')
 
 @section('content')
 <div class="max-w-7xl mx-auto py-8 px-4">
@@ -12,20 +11,29 @@
                 <th class="text-left px-6 py-4">Nombre</th>
                 <th class="text-left px-6 py-4">Correo</th>
                 <th class="text-left px-6 py-4">Registrado</th>
+                <th class="text-left px-6 py-4">Carrito</th>
+
             </tr>
         </thead>
         <tbody class="divide-y divide-gray-200">
             @forelse ($clientes as $cliente)
-                <tr class="hover:bg-gray-100">
-                    <td class="px-6 py-4">{{ $cliente->id }}</td>
-                    <td class="px-6 py-4">{{ $cliente->name }}</td>
-                    <td class="px-6 py-4">{{ $cliente->email }}</td>
-                    <td class="px-6 py-4">{{ $cliente->created_at ? $cliente->created_at->format('d/m/Y') : 'Sin fecha' }}</td>
-                </tr>
+            <tr class="hover:bg-gray-100">
+                <td class="px-6 py-4">{{ $cliente->id }}</td>
+                <td class="px-6 py-4">{{ $cliente->name }}</td>
+                <td class="px-6 py-4">{{ $cliente->email }}</td>
+                <td class="px-6 py-4">{{ $cliente->created_at ? $cliente->created_at->format('d/m/Y') : 'Sin fecha' }}</td>
+                <td class="px-6 py-4">
+                    <a href="{{ route('clientes.carrito', $cliente->id) }}"
+                        class="px-4 py-2 bg-[#E5CA17] text-[#3c340e] font-semibold rounded hover:bg-yellow-400 transition">
+                        Ver carrito
+                    </a>
+                </td>
+
+            </tr>
             @empty
-                <tr>
-                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">No hay clientes registrados.</td>
-                </tr>
+            <tr>
+                <td colspan="4" class="px-6 py-4 text-center text-gray-500">No hay clientes registrados.</td>
+            </tr>
             @endforelse
         </tbody>
     </table>

@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MotoController;
 use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarritoController;
+
 
 // Página de inicio
 Route::get('/', function () {
@@ -46,11 +48,17 @@ Route::middleware(['auth', 'role:1'])->group(function () {
     Route::put('/equipos/{equipo}', [EquipoController::class, 'update'])->name('equipos.update');
     Route::delete('/equipos/{equipo}', [EquipoController::class, 'destroy'])->name('equipos.destroy');
     Route::get('/listadoClientes', [AuthController::class, 'index'])->name('listadoClientes');
-
+    Route::get('/clientes/{id}/carrito', [CarritoController::class, 'verCarritoCliente'])
+    ->name('clientes.carrito');
 });
 
 Route::middleware(['auth', 'role:2'])->group(function () {
-
+    Route::get('/carrito', [CarritoController::class, 'index'])->name('carrito.index');
+    Route::post('/carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
+    Route::delete('/carrito/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
+    Route::post('/carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
+    Route::post('/carrito/{id}/mas', [CarritoController::class, 'mas'])->name('carrito.mas');
+    Route::post('/carrito/{id}/menos', [CarritoController::class, 'menos'])->name('carrito.menos');
 });
 
 
@@ -58,4 +66,3 @@ Route::middleware(['auth', 'role:2'])->group(function () {
 Route::get('/sucursales', [SucursalController::class, 'index'])->name('sucursales');
 
 Route::get('/equipo', [EquipoController::class, 'index'])->name('equipo');
-

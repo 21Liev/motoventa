@@ -39,6 +39,18 @@
         </a>
     </section>
 
+    <section class="mt-16 p-8">
+        @auth
+        @if(auth()->user()->role == 1)
+        <div class="flex justify-center">
+            <a href="{{ route('equipos.create') }}"
+                class="px-6 py-3 bg-[#E5CA17] text-[#3c340e] font-semibold rounded-lg shadow hover:bg-yellow-400 transition">
+                + Agregar Equipo
+            </a>
+        </div>
+        @endif
+        @endauth
+    </section>
     {{-- Tarjetas de equipo --}}
     <section class="mt-16 p-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -85,11 +97,12 @@
                 @auth
                 @if(auth()->user()->role == 1)
                 <div class="flex justify-between mt-6">
-                    <a href="{{ route('equipos.edit', $equipo) }}"
+
+                    <a href="{{ route('equipos.edit', $equipo->id) }}"
                         class="px-4 py-2 bg-yellow-400 text-slate-800 font-semibold rounded-lg shadow hover:bg-yellow-500 transition">
                         Editar
                     </a>
-                    <form action="{{ route('delete', $equipo) }}" method="POST"
+                    <form action="{{ route('equipos.destroy', $equipo->id) }}" method="POST"
                         onsubmit="return confirm('¿Estás seguro de que querés eliminar este equipo? Esta acción no se puede deshacer.');">
                         @csrf
                         @method('DELETE')

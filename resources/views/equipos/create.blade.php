@@ -9,13 +9,13 @@
             @csrf
 
             @if ($errors->any())
-                <div class="text-red-600 text-sm">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>• {{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="text-red-600 text-sm">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>• {{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
 
             <div>
@@ -36,17 +36,18 @@
             </div>
 
             <div>
-                <label for="fk_tipo_equipo" class="block text-sm font-medium text-slate-700">Tipo de equipo</label>
-                <select name="fk_tipo_equipo" required class="w-full mt-2 p-3 rounded-xl border border-gray-300">
-                    <option value="">Seleccioná un tipo</option>
-                    <option value="1">Casco</option>
-                    <option value="2">Guante</option>
-                    <option value="3">Campera</option>
-                    <option value="4">Pantalones</option>
-                    <option value="5">Botas</option>
-                    <option value="6">Accesorios</option>
+                <label for="categoria" class="block text-sm font-medium text-slate-700">Categoría</label>
+                <select name="categoria" required class="w-full mt-2 p-3 rounded-xl border border-gray-300">
+                    <option value="">Seleccioná una categoría</option>
+                    <option value="cascos">Cascos</option>
+                    <option value="guantes">Guantes</option>
+                    <option value="camperas">Camperas</option>
+                    <option value="pantalones">Pantalones</option>
+                    <option value="botas">Botas</option>
+                    <option value="accesorios">Accesorios</option>
                 </select>
             </div>
+
 
             <div>
                 <label for="imagen" class="block text-sm font-medium text-slate-700">Imagen</label>

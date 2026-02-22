@@ -41,7 +41,7 @@ class EquipoController extends Controller
 
         $equipo->save();
 
-        return redirect()->route('equipos.index')->with('success', 'Equipo agregado exitosamente.');
+        return redirect()->route('equipo')->with('success', 'Equipo agregado exitosamente.');
     }
 
     public function edit($id)
@@ -68,7 +68,7 @@ class EquipoController extends Controller
 
         $equipo->save();
 
-        return redirect()->route('equipos.index')->with('success', 'Equipo actualizado correctamente.');
+        return redirect()->route('equipo')->with('success', 'Equipo actualizado correctamente.');
     }
 
     public function destroy($id)
@@ -79,6 +79,6 @@ class EquipoController extends Controller
 
         $equipo->delete();
 
-        return redirect()->route('equipos.index')->with('success', 'Equipo eliminado correctamente');
+        return redirect()->route('equipo')->with('success', 'Equipo eliminado correctamente');
     }
 }

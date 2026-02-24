@@ -8,6 +8,7 @@ use App\Http\Controllers\MotoController;
 use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\ProfileController;
 
 
 // Página de inicio
@@ -25,7 +26,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/registrarse', [AuthController::class, 'showRegister'])->name('registro');
 Route::post('/registrarse', [AuthController::class, 'registrarse'])->name('registrarse.post');
 
-
+Route::middleware('auth')->group(function () {
+    Route::get('/perfil', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/perfil', [ProfileController::class, 'update'])->name('profile.update');
+});
 
 
 

@@ -65,6 +65,16 @@
                         @endif
                         @endauth
                         @auth
+                        @if(auth()->user()->role == 1 || auth()->user()->role == 2)
+                        <li class="flex items-center p-3 text-sm gap-x-2 text-slate-800 hover:scale-125 hover:bg-[#ffe786] rounded-lg transition-all duration-500 hover:shadow-md">
+                            <img src="https://img.icons8.com/?size=23&id=QUnLakqCvUtp&format=png&color=292929" alt="">
+                            <a href="{{ route('profile.edit') }}" class="flex items-center">
+                                MI PERFIL
+                            </a>
+                        </li>
+                        @endif
+                        @endauth
+                        @auth
                         @if(auth()->user()->role == 1)
                         <li class="flex items-center p-3 text-sm gap-x-2 text-slate-800 hover:scale-125 hover:bg-[#ffe786] rounded-lg transition-all duration-500 hover:shadow-md">
                             <img src="https://img.icons8.com/ios-filled/32/000000/motorcycle.png" alt="">
@@ -79,6 +89,7 @@
                                 LISTADO CLIENTES
                             </a>
                         </li>
+                        
                         @endif
                         @endauth
                         @guest

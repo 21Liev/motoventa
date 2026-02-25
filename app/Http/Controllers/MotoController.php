@@ -27,7 +27,7 @@ public function index(Request $request)
         'anio' => 'required|integer|min:1900|max:' . date('Y'), // Validación para el año (no puede ser menor a 1900 ni mayor al año actual)
         'precio' => 'required|numeric|min:0', // Precio debe ser un número mayor o igual a 0
         'descripcion' => 'required|string|max:1000', // Descripción no puede exceder 1000 caracteres
-        'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Imagen (opcional) con un máximo de 2MB
+        'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Imagen (opcional) 
     ]);
 
     // Si la validación pasa, guardar la moto
@@ -72,7 +72,7 @@ public function index(Request $request)
             'anio' => 'required|integer',
             'precio' => 'required|numeric',
             'descripcion' => 'required|string',
-            // 'imagen' => 'nullable|image|max:2048', // si lo volvés a usar
+            // 'imagen' => 'nullable|image|max:2048', // si lo volvemos a usar
         ]);
 
         $moto = Moto::findOrFail($id);
@@ -81,7 +81,7 @@ public function index(Request $request)
         $moto->precio = $request->precio;
         $moto->descripcion = $request->descripcion;
 
-        // Si volvés a usar imagen:
+        // Si volvemos a usar imagen:
         // if ($request->hasFile('imagen')) {
         //     $moto->imagen = $request->file('imagen')->store('motos', 'public');
         // }

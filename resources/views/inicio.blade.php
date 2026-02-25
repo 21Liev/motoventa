@@ -204,15 +204,17 @@
 </main>
 @endsection
 <script>
-    document.querySelectorAll('.filtro-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const categoria = this.getAttribute('data-filtro');
-            const url = categoria === 'todos'
-                ? '{{ route('motos.index') }}'
-                : '{{ route('motos.index') }}' + '?categoria=' + categoria;
+document.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
 
-            window.location.href = url;
-        });
+        const categoria = btn.dataset.categoria;
+
+        const url = categoria === 'todos'
+            ? "{{ route('motos.index') }}"
+            : "{{ route('motos.index') }}" + "?categoria=" + categoria;
+
+        window.location.href = url;
     });
+});
 </script>
